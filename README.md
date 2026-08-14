@@ -49,4 +49,3 @@ The skill starts with `$grill-me`, creates the project map before code, routes `
 ## License
 
 MIT. See [LICENSE](LICENSE).
-

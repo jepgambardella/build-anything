@@ -96,10 +96,10 @@ Last updated: [YYYY-MM-DD]
 
 ## Source of truth
 
-Architecture: `ARCHITECTURE.md`  
-Work order: `ROADMAP.md`  
-Current state: `STATUS.md`  
-Requirement evidence: `TRACEABILITY.md`  
+Architecture: `ARCHITECTURE.md`
+Work order: `ROADMAP.md`
+Current state: `STATUS.md`
+Requirement evidence: `TRACEABILITY.md`
 Decisions: `DECISIONS.md`
 """,
         project_dir / "ARCHITECTURE.md": f"""# {args.name} architecture
