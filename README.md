@@ -4,7 +4,7 @@
 
 ### Turn the idea into a finished, verified product.
 
-**Per fare cose, e basta.**
+**Build things. That's it.**
 
 </div>
 
@@ -24,11 +24,11 @@ Use simple technical language. Keep the code small. Apply Ponytail: choose the s
 
 Replace generic output with a clear decision, a real implementation, or a specific blocker.
 
-### Anti-linguaggio lungo
+### Anti-verbosity
 
 Use the fewest words that make the decision, next action, and evidence unambiguous.
 
-### Anti-prigrizia
+### Anti-laziness
 
 Finish the requested scope. Do not hide missing work behind a plan, a stub, or a report.
 
