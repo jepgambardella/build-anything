@@ -20,6 +20,18 @@ No slop. No vague hand-waving. No long language that hides missing work. No lazy
 
 Use simple technical language. Keep the code small. Apply Ponytail: choose the simplest solution that actually works, then verify it.
 
+### Anti-slop
+
+Replace generic output with a clear decision, a real implementation, or a specific blocker.
+
+### Anti-linguaggio lungo
+
+Use the fewest words that make the decision, next action, and evidence unambiguous.
+
+### Anti-prigrizia
+
+Finish the requested scope. Do not hide missing work behind a plan, a stub, or a report.
+
 ## What it does
 
 1. Grills the idea into a clear project contract.
