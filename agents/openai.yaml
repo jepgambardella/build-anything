@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Anything"
+  short_description: "Plan, build, track, and ship complete projects"
+  default_prompt: "Use $build-anything to clarify, architect, implement, verify, and track this project from idea to done."
