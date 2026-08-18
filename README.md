@@ -18,16 +18,16 @@ Build Anything ships the specialist skills it must use. The user does not need t
 
 Included orchestration:
 
-- `grill-me` — mandatory `/grilling` interview before implementation.
-- `unlazy` — gates, runnable checks, evidence, Depth Tree, and report audit.
-- `ponytail` — simplest solution that actually works, without removing correctness or safety.
-- `find-skills`, `skill-installer`, and `skill-creator` — verified discovery, installation, and skill maintenance.
+- [`grill-me`](bundled-skills/grill-me/SKILL.md) — mandatory `/grilling` interview before implementation.
+- [`unlazy`](bundled-skills/unlazy/SKILL.md) — gates, runnable checks, evidence, Depth Tree, and report audit.
+- [`ponytail`](bundled-skills/ponytail/SKILL.md) — simplest solution that actually works, without removing correctness or safety.
+- [`find-skills`](bundled-skills/find-skills/SKILL.md), [`skill-installer`](bundled-skills/skill-installer/SKILL.md), and [`skill-creator`](bundled-skills/skill-creator/SKILL.md) — verified discovery, installation, and skill maintenance.
 
 Included design spine:
 
-- `design-everything`, `frontend-design`, `css-for-perfect-frontend`, `adapt`, and `ui-component-patterns`.
-- `teach-impeccable`, `image-taste-frontend`, `imagegen`, `ui-ux-pro-max`, and the bundled style baselines: `minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `design-taste-frontend`, and `stitch-design-taste`.
-- `audit`, `critique`, `harden`, `polish`, `web-design-guidelines`, `arrange`, `typeset`, `normalize`, `extract`, `user-oriented-frontend-and-design`, `clarify`, and `onboard`.
+- [`design-everything`](bundled-skills/design-everything/SKILL.md), [`frontend-design`](bundled-skills/frontend-design/SKILL.md), [`css-for-perfect-frontend`](bundled-skills/css-for-perfect-frontend/SKILL.md), [`adapt`](bundled-skills/adapt/SKILL.md), and [`ui-component-patterns`](bundled-skills/ui-component-patterns/SKILL.md).
+- [`teach-impeccable`](bundled-skills/teach-impeccable/SKILL.md), [`image-taste-frontend`](bundled-skills/image-taste-frontend/SKILL.md), [`imagegen`](bundled-skills/imagegen/SKILL.md), [`ui-ux-pro-max`](bundled-skills/ui-ux-pro-max/SKILL.md), and the bundled style baselines: [`minimalist-ui`](bundled-skills/minimalist-ui/SKILL.md), [`industrial-brutalist-ui`](bundled-skills/industrial-brutalist-ui/SKILL.md), [`high-end-visual-design`](bundled-skills/high-end-visual-design/SKILL.md), [`design-taste-frontend`](bundled-skills/design-taste-frontend/SKILL.md), and [`stitch-design-taste`](bundled-skills/stitch-design-taste/SKILL.md).
+- [`audit`](bundled-skills/audit/SKILL.md), [`critique`](bundled-skills/critique/SKILL.md), [`harden`](bundled-skills/harden/SKILL.md), [`polish`](bundled-skills/polish/SKILL.md), [`web-design-guidelines`](bundled-skills/web-design-guidelines/SKILL.md), [`arrange`](bundled-skills/arrange/SKILL.md), [`typeset`](bundled-skills/typeset/SKILL.md), [`normalize`](bundled-skills/normalize/SKILL.md), [`extract`](bundled-skills/extract/SKILL.md), [`user-oriented-frontend-and-design`](bundled-skills/user-oriented-frontend-and-design/SKILL.md), [`clarify`](bundled-skills/clarify/SKILL.md), and [`onboard`](bundled-skills/onboard/SKILL.md).
 
 Included implementation routes cover React/Next/Vite, Rust, Python, Cloudflare, Supabase/PostgreSQL, SwiftUI/macOS/iOS, Android, WinUI, Qt, Tauri, browser testing, packaging, and desktop UI automation. See the complete [bundled skill catalog](references/bundled-skill-catalog.md).
 
