@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Everything"
+  short_description: "Orchestrate high-quality responsive UI design"
+  default_prompt: "Use $design-everything to design or refine this interface with a clear visual direction, mobile-first behavior, and verified implementation."

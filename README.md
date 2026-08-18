@@ -12,6 +12,25 @@ Build Anything is a project-lead skill for AI coding agents. It takes an unclear
 
 It covers web apps, frontend, backend, Rust, Python, Cloudflare, Supabase, APIs, automations, macOS, iPhone, Android, Windows, Linux, Qt, WinUI, Tauri, packaging, and optimization. It routes specialist skills only when the project needs them.
 
+## Self-contained by design
+
+Build Anything ships the specialist skills it must use. The user does not need to install them separately. The controller reads the copies in `bundled-skills/`, records which ones were loaded, and leaves evidence of how each one was applied.
+
+Included orchestration:
+
+- `grill-me` — mandatory `/grilling` interview before implementation.
+- `unlazy` — gates, runnable checks, evidence, Depth Tree, and report audit.
+- `ponytail` — simplest solution that actually works, without removing correctness or safety.
+- `find-skills`, `skill-installer`, and `skill-creator` — verified discovery, installation, and skill maintenance.
+
+Included design spine:
+
+- `design-everything`, `frontend-design`, `css-for-perfect-frontend`, `adapt`, and `ui-component-patterns`.
+- `teach-impeccable`, `image-taste-frontend`, `imagegen`, `ui-ux-pro-max`, and the bundled style baselines: `minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `design-taste-frontend`, and `stitch-design-taste`.
+- `audit`, `critique`, `harden`, `polish`, `web-design-guidelines`, `arrange`, `typeset`, `normalize`, `extract`, `user-oriented-frontend-and-design`, `clarify`, and `onboard`.
+
+Included implementation routes cover React/Next/Vite, Rust, Python, Cloudflare, Supabase/PostgreSQL, SwiftUI/macOS/iOS, Android, WinUI, Qt, Tauri, browser testing, packaging, and desktop UI automation. See the complete [bundled skill catalog](references/bundled-skill-catalog.md).
+
 ## The rule
 
 **Done means done.**

@@ -6,6 +6,7 @@ The mother skill is based first on the installed local skills and the user's pro
 - [ASD-STE100 official site](https://www.asd-ste100.org/): controlled technical language, writing rules, dictionary, and Issue 9 reference.
 - [ASD-STE100 official overview](https://www.asd-ste100.org/about_STE.html): purpose, clarity, stable terminology, and technical documentation scope.
 - Local `ponytail:ponytail` instructions are authoritative for simplicity, reuse, standard-library/native-first decisions, and safe boundaries.
+- [Unlazy v2](https://github.com/Leonxlnx/unlazy): gate-first completion, evidence-ledger discipline, Depth Tree decomposition, parent re-verification, and report-number audit. Bundled snapshot installed from commit `ed9e8d2b5919698cf2c54bda270d507e10b69617` on 2026-08-18.
 - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills): source family for established React/Next skill patterns; route only when the local equivalent is absent or the project uses it.
 - [Apollo Rust best practices](https://github.com/apollographql/skills): external Rust candidate inspected through skills.sh; local `$rust-best-practices` remains the default.
 - [Tauri development candidate](https://skills.sh/mindrally/skills/tauri-development): optional external candidate inspected through `find-skills`; do not install without approval.
@@ -18,3 +19,14 @@ The mother skill is based first on the installed local skills and the user's pro
 - [Alternative Tauri candidate](https://www.skills.sh/nodnarbnitram/claude-code-extensions/tauri-v2): rejected because it duplicated the installed local `$tauri-v2` route without enough additional value.
 
 These links are references, not permission to add dependencies, update versions, or impose a framework. Validate current source state before installing or using an external skill.
+
+## Bundle policy
+
+The package includes the baseline orchestration, design, quality, language,
+platform, and release routes under `bundled-skills/`. The controller must read
+those local copies first. The bundle is a reproducible snapshot, not an
+automatic update mechanism. When a route is missing, discover and verify it
+before adding it, then record its source, ref/SHA, date, and validator result.
+Source-only frontmatter keys in bundled copies are moved under `metadata` and
+non-slug source names are normalized for the local validator. Instruction
+bodies are unchanged.

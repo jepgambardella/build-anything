@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSS for Perfect Frontend"
+  short_description: "Responsive CSS, clean layout, polished UI"
+  default_prompt: "Use $css-for-perfect-frontend to build or audit this frontend for responsive layout, overflow safety, visual consistency, and production-ready polish."

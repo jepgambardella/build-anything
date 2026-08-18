@@ -59,9 +59,43 @@ Read these files before changing code:
 2. `docs/project/ARCHITECTURE.md`
 3. `docs/project/STATUS.md`
 4. the active items in `docs/project/ROADMAP.md`
-5. `docs/project/TRACEABILITY.md` and `docs/project/DECISIONS.md` when relevant
+5. `docs/project/GRILL.md` and `docs/project/ACTIVE-SKILLS.md`
+6. `docs/project/TRACEABILITY.md`, `docs/project/DECISIONS.md`, and `GATES.md` when relevant
 
-Keep the implementation simple. Preserve unrelated work. Update status and traceability after each meaningful change. Do not mark an item done without verification evidence.
+Keep the implementation simple. Preserve unrelated work. Update status, skill evidence, and traceability after each meaningful change. Do not mark an item done without verification evidence.
+""",
+        root / "GATES.md": """# Gates: <project name>
+
+Scope: acceptance ledger for the current Build Anything task
+
+- [ ] G1: <observable requested outcome>
+  CHECK: <command that proves the outcome>
+  EXPECT: <decisive output or /regex/>
+  EVIDENCE: pending
+
+- [ ] G2: <manual or user-facing outcome>
+  EVIDENCE: pending
+
+<!-- Use ABANDON: G<n> <specific reason> only for a genuine external blocker. -->
+""",
+        root / "PLAN.md": """# Plan: <project name>
+
+Depth: tree <N>   Mode: solo | orchestrated
+Budget note: <what a competent single pass requires>
+
+## Contract
+
+Decide before implementation or fan-out. Record interfaces, data ownership, file ownership, naming, and error conventions.
+
+## Tree
+
+- 1 <task> .......... GATES.md
+
+## Status log
+
+Append one line per event. Never rewrite earlier entries.
+
+- <step> plan written, contract fixed
 """,
         project_dir / "PROJECT.md": f"""# {args.name}
 
@@ -205,6 +239,34 @@ Record only decisions that affect future work. Do not turn this into a diary.
 - Why: [constraint or evidence]
 - Rejected: [alternative and reason]
 - Consequence: [what future work must follow]
+""",
+        project_dir / "GRILL.md": f"""# {args.name} grilling record
+
+Status: pending
+Invocation: `/grilling` via bundled `grill-me`
+Last updated: [YYYY-MM-DD]
+
+Record the grouped questions, concise answers, unresolved material decisions, and the resulting `REQ-*` acceptance rows here. If the command cannot run, write `GRILL-FALLBACK`, the exact limitation, and the same seven question groups.
+
+## Contract summary
+
+- User/problem: [fill]
+- Primary outcome: [fill]
+- Scope and non-scope: [fill]
+- Platform/runtime: [fill]
+- Data/security/operations: [fill]
+- Design/accessibility/performance: [fill]
+- Acceptance evidence: [fill]
+""",
+        project_dir / "ACTIVE-SKILLS.md": f"""# {args.name} active skills
+
+Record the actual bundled files read and applied for this task. A name alone is not evidence.
+
+| Name | Relative path | Why loaded | Loaded | Applied action | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| `grill-me` | `bundled-skills/grill-me/SKILL.md` | mandatory discovery | [ ] | [fill] | [path/command] |
+| `unlazy` | `bundled-skills/unlazy/SKILL.md` | mandatory completion gates | [ ] | [fill] | [path/command] |
+| `ponytail` | `bundled-skills/ponytail/SKILL.md` | mandatory simplicity | [ ] | [fill] | [path/command] |
 """,
     }
 

@@ -1,174 +1,191 @@
 ---
 name: build-anything
-description: Guide software projects from an unclear idea to a complete, verified, maintainable delivery. Use when the user wants to build, create, refactor, optimize, or ship a web app, API, backend, Rust or Python system, Cloudflare/Supabase service, CLI, desktop app, mobile app, automation, or multi-platform product, especially when the work needs grilling, architecture, repository organization, persistent roadmap, traceability, and a complete done state.
+description: Build, refactor, optimize, and ship complete software projects from vague ideas to verified delivery. Use for web apps, frontend, backend, APIs, Rust, Python, Cloudflare, Supabase, automation, CLI, macOS, iPhone, Android, Windows, Linux, Qt, Tauri, and multi-platform work. This package includes its mandatory orchestration, anti-laziness, simplicity, grilling, and design skills; use the bundled copies instead of assuming the user installed anything.
 ---
 
-# Build Anything
+# Build Anything — distilled execution controller
 
-Act as project lead, systems architect, implementation engineer, and delivery owner. Turn an idea into a small, explicit, traceable project. Use this skill as the governing workflow and route only the specialist skills that the project needs. This is not an index: perform the reasoning, create the project map, keep the repository coherent, implement the requested scope, verify it, and update the record.
+Act as the driver: product lead, architect, implementer, verifier, and handoff owner. This is an execution controller, not a list of suggestions. Convert the request into a bounded contract, activate the right bundled skills, implement the complete scope, prove the result, and leave a map that survives compaction and a new agent.
 
-## Non-negotiable contract
+## Rule 0 — use the package, not the user's installation
 
-- Start with understanding. Never begin code on an unexamined product idea.
-- Always apply `ponytail:ponytail` at full intensity to coding, architecture, dependencies, and cleanup. Use the shortest solution that actually works: inspect first, reuse existing code, prefer standard-library/native features, and add dependencies only for a measured need. Ponytail simplifies within mandatory platform, security, accessibility, and correctness constraints; it never removes those constraints.
-- Use `$grill-me` as the mandatory project-definition phase. It is explicit because the source skill disables implicit invocation. Run `/grilling`; if the runtime cannot start that command, reproduce the same relentless interview and state the limitation honestly.
-- Use `$design-everything` as the primary design orchestrator for web/frontend UI and flows. For native macOS, Qt, WinUI, Android, or iOS surfaces, use the platform skill as the implementation authority; use `$design-everything` only for compatible visual direction and the reference folder. Preserve the applicable responsive or window-resize QA contract.
-- Use `$find-skills` when local coverage is missing. Check the leaderboard, search, and verify install count, source reputation, actual `SKILL.md` scope, license, activity, and security warnings before recommending or installing anything. Do not install a remote skill merely because it appears in search. When the user explicitly authorizes installation, use `$skill-installer`, install the exact verified path, read and validate the installed skill, record its source and route, and then use it. Otherwise present the candidate and wait.
-- Make the project survive compaction, a new thread, and a different agent by writing decisions and status to the repository, not only to chat.
-- Use simple technical language in dialogue, code comments, commit messages, and project documents. For English, follow ASD-STE100-inspired rules: short active sentences, one idea per sentence, stable terms, no idioms, and defined abbreviations. Apply the same clarity in Italian and other languages.
+Resolve this skill's directory as `<BUILD_ANYTHING_DIR>`. All mandatory skills are shipped in `<BUILD_ANYTHING_DIR>/bundled-skills/`.
 
-## Done means done
+Before doing project work:
 
-Deliver every requested item. Do not return a plan instead of the implementation. Do not call a partial vertical slice complete because a convenient part was skipped. If one item is genuinely blocked, finish the other items and name the specific blocker in one sentence. Keep the roadmap honest: `done` requires implementation plus the relevant verification evidence.
+1. Read the actual `SKILL.md` for every mandatory route from `bundled-skills/<name>/SKILL.md`. Do not merely mention `$name` and assume it loaded.
+2. Put every loaded route in `docs/project/ACTIVE-SKILLS.md` with: `name`, relative path, reason, loaded status, applied action, and evidence path or command.
+3. Use the bundled copy when it exists. Do not require the user to install it globally.
+4. If a requested skill is not bundled, use the bundled `find-skills` and `skill-installer` routes to find, verify, and install it into the project or this package only when authorized. Record source, ref, commit, date, and validator result. Never silently substitute an unverified skill.
+5. A mandatory route without a loaded file and an evidence row is **not used**. Do not mark the project ready while one remains missing.
 
-## Act, but respect authority
+The mandatory baseline for every non-trivial build is:
 
-- If an action is cheap, reversible, local, and inside the requested scope, do it and report it.
-- Ask before anything that reaches an audience, publishes externally, deletes material data, changes production, spends significant money, or takes a long expensive operation.
-- If something is broken and the user asked for implementation, fix the root cause and verify it. Do not turn a fixable issue into the user's to-do list.
-- A question is a question. “Should we use X?” means compare and answer. “What would it take to add Y?” means explain scope. Do not implement until the user says to proceed.
-- Preserve unrelated dirty changes and existing contracts. Never use broad reset, checkout, clean, or deletion to make the repository look tidy.
+- `bundled-skills/grill-me/SKILL.md` and a real `/grilling` session;
+- `bundled-skills/unlazy/SKILL.md` and a gates ledger;
+- `bundled-skills/ponytail/SKILL.md` at `full` intensity after the problem is understood;
+- the project map created by `scripts/init_project_map.py`;
+- the platform route and, for any visual surface, `bundled-skills/design-everything/SKILL.md`.
 
-## 1. Grill the idea into a project contract
+If the runtime exposes a skill invocation such as `$grill-me`, `$unlazy`, or `$ponytail`, invoke it after reading the bundled file. The path and the evidence record remain mandatory even when the invocation is available.
 
-Run the explicit grilling phase before implementation. Start with one round of no more than seven grouped questions. Ask follow-up questions only for a material ambiguity that changes scope, architecture, safety, cost, or acceptance. Stop when the answers are sufficient to write a bounded contract; do not ask for information already present in the repository or user brief.
+## Rule 1 — classify the user's intent before acting
+
+- If the user asks a question, answer the question. Do not implement a proposal.
+- If the user asks to build, change, fix, refactor, optimize, or ship, execute the workflow below.
+- Treat a one-line typo or factual lookup as trivial. For every other code, design, data, or repository change, use the baseline.
+- Act on cheap, reversible work inside the request. Ask only before publishing, deleting material data, changing production, spending money, or starting a costly external operation.
+
+## Rule 2 — create control files before code
+
+Inspect the exact project root, `git status`, repository instructions, manifests, lockfiles, source layout, tests, deployment files, and existing design context. Do not infer from a neighboring checkout or chat memory.
+
+Run:
+
+```bash
+python3 <BUILD_ANYTHING_DIR>/scripts/init_project_map.py \
+  --root <project-root> --name "<project name>"
+```
+
+Use `--create-root` only when the user deliberately requested a new local root. Read existing files before updating them; the bootstrap never proves that an existing document is current.
+
+Before implementation, ensure these files exist and contain the current task:
+
+```text
+GATES.md                         # unlazy acceptance ledger at repository root
+PLAN.md                          # contract, ownership, tree, and append-only status log
+AGENTS.md                        # entry rules and read-first order
+docs/project/PROJECT.md         # user outcome, scope, constraints, REQ-* rows
+docs/project/ARCHITECTURE.md    # boundaries, modules, data, runtime, contracts
+docs/project/ROADMAP.md         # short ordered work list
+docs/project/STATUS.md          # current phase, evidence, next action, blockers
+docs/project/TRACEABILITY.md    # requirement -> design -> code -> verification
+docs/project/DECISIONS.md       # only decisions future agents must not reopen
+docs/project/GRILL.md            # grilling transcript or explicit fallback record
+docs/project/ACTIVE-SKILLS.md   # loaded bundled skills and applied evidence
+```
+
+Do not create a second project-document system when the repository already has an equivalent one. Extend the existing source of truth.
+
+## Rule 3 — grill before implementation
+
+Run the bundled `grill-me` skill and start `/grilling` before writing code. The first round has no more than seven grouped questions. Use repository evidence to answer known points before asking the user.
 
 Resolve:
 
-1. User, problem, job-to-be-done, primary outcome, and success measure.
-2. Scope, non-scope, required deliverables, priority, and acceptance criteria.
+1. User, problem, primary job, outcome, and success measure.
+2. Required deliverables, non-scope, priorities, and acceptance criteria.
 3. Main flows, states, inputs, outputs, permissions, errors, offline behavior, and edge cases.
-4. Target platform(s), runtime, supported versions, devices, browsers, deployment, and operating constraints.
+4. Target platforms, runtimes, versions, devices, browsers, deployment, and operating limits.
 5. Data ownership, persistence, APIs, integrations, secrets, privacy, security, observability, and recovery.
-6. Existing code/assets/design system, visual direction, accessibility, localization, and performance expectations.
-7. Delivery limits: time, budget, compatibility, release process, and what must not be introduced.
+6. Existing code/assets/design system, visual direction, accessibility, localization, and performance.
+7. Delivery limits, release process, and what must not be introduced.
 
-Create requirement IDs such as `REQ-001` and write them into the project map. Convert vague wishes into testable statements. When multiple choices are valid, present a small decision set with trade-offs and recommend one; do not ask open-ended questions forever.
+Write the answers and requirement IDs (`REQ-001`, `REQ-002`, ...) to `docs/project/GRILL.md` and `PROJECT.md`. Convert vague words into observable acceptance tests. Stop asking when the contract is testable.
 
-## 2. Create the persistent project map
+If `/grilling` cannot run, do not pretend it ran. Record `GRILL-FALLBACK`, the exact runtime limitation, and the same seven groups in `GRILL.md`; use the embedded question set only as an explicit fallback. A fallback is a visible risk, not a silent skip.
 
-Inspect the exact project root, git state, existing instructions, package manifests, lockfiles, source layout, tests, deployment files, and current documentation. Then bootstrap the canonical map with the bundled script:
+## Rule 4 — design is a mandatory route for visual work
+
+Any page, app screen, dashboard, component, design system, redesign, CSS fix, responsive fix, or interaction change is visual work. Before UI code:
+
+1. Load bundled `design-everything` and its directly required references.
+2. Load bundled `teach-impeccable` when design context is absent, stale, or untrusted. Let it update only the requested project context files.
+3. Create `design-references/<slug>/` with the bundled design scaffold. Preserve existing evidence.
+4. Inspect the real routes, tokens, fonts, icons, assets, component library, and running UI before proposing a direction.
+5. Present two or three compact direction cards when the direction is not fixed. Each card states thesis, palette roles, type pairing, layout, motion, responsive behavior, and trade-off. Choose one and record accepted/rejected directions.
+6. Load and apply the design spine: `frontend-design`, `css-for-perfect-frontend`, `adapt`, and `ui-component-patterns`.
+7. Choose exactly one visual baseline from the bundled style skills. Do not merge incompatible baselines. Use modifiers only when justified.
+8. Run the bundled quality routes `audit`, `harden`, `polish`, and `web-design-guidelines` as a review pass, not as competing implementation authorities.
+9. Load `image-taste-frontend` and `imagegen` only when imagery or generated visual assets materially inform the product. Inspect output before using it.
+
+For native UI, the native platform skill owns implementation and window/lifecycle/accessibility rules. Use `design-everything` for compatible visual direction and the same reference folder. Never transfer web CSS assumptions to native layout.
+
+Mobile-first is a gate, not a preference: start at the narrowest usable width, add content-driven `min-width` enhancements, keep one page scroll axis, make shells shrink safely, and test 320/360/390/430, 768, 1024, 1280/1440, and wide states where applicable. Verify long text, tables, menus, popovers, fixed sidebars, focus, touch, keyboard, zoom, reduced motion, loading, empty, error, disabled, and localization states.
+
+## Rule 5 — activate the smallest complete route
+
+Load every `MUST LOAD` item in the matching row from `bundled-skills/`, then record the action in `ACTIVE-SKILLS.md`. Do not load an entire category when a narrower row covers the request.
+
+| Request | MUST LOAD | MUST LEAVE |
+| --- | --- | --- |
+| Any build | `grill-me`, `unlazy`, `ponytail` | `GRILL.md`, `GATES.md`, active-skill evidence |
+| Web UI / responsive CSS | `design-everything`, `frontend-design`, `css-for-perfect-frontend`, `adapt`, `ui-component-patterns` | design references, direction decision, viewport evidence |
+| Web UI quality pass | `audit`, `harden`, `polish`, `web-design-guidelines` | audit findings and fixes, not only a score |
+| Image-led UI | `image-taste-frontend`, `imagegen` | selected assets and source/evidence in design references |
+| React / Next / Vite | `vercel-react-best-practices`, `vercel-composition-patterns`, `react-doctor`, `vite`, `vite-patterns`, `typescript-advanced-types` when bundled or verified | typecheck, lint, test, build, and route evidence |
+| Rust | `rust-best-practices`, `rust-async-patterns` when async, `rust-compile-optimization` for build/disk, `unsafe-checker` for unsafe/FFI | focused checks and full relevant cargo gate |
+| Python | `python-code-style`, `python-type-safety`, `python-error-handling`, `python-resource-management`; add `fastapi-python`, async, performance, or design-pattern routes when used | tests, type/lint checks, runtime smoke |
+| Cloudflare | `cloudflare`, `wrangler`, `workers-best-practices`; add Agents SDK, Durable Objects, MCP, or web-perf only when used | bindings, env separation, local smoke, actual provider/deploy evidence |
+| Supabase / PostgreSQL | `supabase`, `supabase-postgres-best-practices`, `postgresql-table-design`, `postgresql-code-review`, `postgresql-optimization` when relevant | migration, RLS/auth, index/query and backup evidence |
+| iPhone / iPad | `mobile-ios-design`, `swiftui-expert-skill`, `swiftui-patterns`, `swiftui-performance`, `ios-localization`, `ios-networking`, `ios-security` as applicable | simulator/device evidence and lifecycle/accessibility checks |
+| macOS native | `macos-development`, its relevant native modules, `appkit-swiftui-bridge`, `macos-capabilities`, `swiftdata-architecture` when used | build/run, window, entitlement, persistence, and UI evidence |
+| Android | `mobile-android-design`, `android-clean-architecture` | back/lifecycle/permission/density/accessibility and build evidence |
+| Windows WinUI 3 | `winui-dev-workflow`, `winui-design`, `winui-code-review`, `winui-ui-testing`, `winui-packaging` | build, UIA, package/install/sign/update/rollback evidence |
+| Qt desktop | `qt-cmake-project`, `qt-ui-design`; add `windows-desktop-e2e` on Windows UIA work | configure/build, DPI/input/accessibility, package/install evidence |
+| Rust/web desktop | `tauri-v2` plus the selected web and target-platform routes | app build, permissions, package, install/launch/update evidence |
+| Missing specialist | bundled `find-skills`, then `skill-installer` only after verification/authorization | source, ref/SHA/date, installed path, validator result |
+
+The full bundle catalog and source records are in [references/bundled-skill-catalog.md](references/bundled-skill-catalog.md). If a row names a skill not yet bundled, stop and resolve that gap. Do not make the user install a baseline route.
+
+## Rule 6 — architecture and implementation
+
+Write the smallest architecture that explains the whole request: boundaries, ownership, dependency direction, runtime topology, data source of truth, contracts, validation, authorization, idempotency, errors, integrations, observability, release, and recovery. Fix interfaces and file ownership in `PLAN.md` before fan-out.
+
+Apply bundled `ponytail` at `full` intensity after tracing the real problem:
+
+1. Question whether the change needs to exist.
+2. Reuse existing code and patterns.
+3. Prefer standard library and native platform features.
+4. Reuse installed dependencies.
+5. Add the smallest correct implementation only when the earlier rungs fail.
+
+Ponytail never removes requested behavior, validation, security, accessibility, data integrity, error handling, or recovery. Do not add speculative abstractions, wrappers, compatibility layers, fake providers, placeholders, silent fallbacks, or half-integrated features. If a simplification has a known ceiling, add one `ponytail:` comment with the ceiling and upgrade trigger.
+
+Build a complete vertical slice in dependency order. After each meaningful slice, run its smallest check and update `TRACEABILITY.md`, `ROADMAP.md`, and `STATUS.md`.
+
+## Rule 7 — unlazy gates are the finish line
+
+Use the bundled `unlazy` method. Before real work, write one gate for each requested outcome in root `GATES.md`. Prefer runnable checks:
+
+```markdown
+- [ ] G1: <observable outcome>
+  CHECK: <command>
+  EXPECT: <decisive output or /regex/>
+  EVIDENCE: pending
+```
+
+Run the bundled checker:
 
 ```bash
-python3 ~/.codex/skills/build-anything/scripts/init_project_map.py \
-  --root <project-root> \
-  --name "Project name"
+node <BUILD_ANYTHING_DIR>/bundled-skills/unlazy/scripts/gate-check.mjs GATES.md
 ```
 
-The script is a non-destructive bootstrap. It creates missing files only and refuses a missing root unless `--create-root` is explicitly supplied for a deliberate new project. It does not refresh existing documents. If it reports `existing`, read that document and update it directly in the same turn. Never assume an existing map is current. The canonical map is:
+Done requires every box checked, decisive evidence recorded, and a final adversarial improvement pass. A checked box with `EVIDENCE: pending` is unmet. If a gate is genuinely impossible, write `ABANDON: G<n> <specific reason>` and surface it in the report; never delete or silently narrow the gate.
 
-```text
-AGENTS.md                         # agent entry rules, if absent
-docs/project/
-  PROJECT.md                      # purpose, scope, requirements, constraints
-  ARCHITECTURE.md                 # system map, boundaries, data and runtime flows
-  ROADMAP.md                      # short ordered work list with IDs and status
-  STATUS.md                       # current phase, done, next, blockers, evidence
-  TRACEABILITY.md                 # requirement -> design -> code -> verification
-  DECISIONS.md                    # small dated decisions and rejected alternatives
-```
+Use solo mode for a focused task. Use the bundled Depth Tree for a subsystem or project that exceeds one focused sitting: write `PLAN.md`, give each leaf disjoint file ownership and its own `gates/*.md`, and give every branch integration gates. The parent re-runs every leaf check. Never trust a leaf's self-report.
 
-If the repository already has an equivalent canonical set, use it instead of adding duplicates. At the start of every turn, read `AGENTS.md` when present, then `PROJECT.md`, `ARCHITECTURE.md`, `STATUS.md`, and the active roadmap entries. At every context boundary, update `STATUS.md` and the next actions. Chat history is not the source of truth.
+At report time, re-measure every number you state. Do not report a plan as completion. Do not report “done” while a gate is unchecked, evidence is pending, a requested route was not loaded, or a required user-facing state was not tested.
 
-## 3. Map architecture before implementation
+## Rule 8 — handoff and compaction survival
 
-Write the smallest architecture that can explain the whole requested system:
+Before ending a substantial turn:
 
-- product boundaries, user flows, modules, ownership, and dependency direction;
-- runtime topology and deployment units;
-- data model, source of truth, migrations, retention, and consistency needs;
-- API/event contracts, validation, error shape, idempotency, and authorization;
-- UI routes/components and design references when a user surface exists;
-- external services, credentials, rate limits, queues, storage, and failure recovery;
-- observability, logging, metrics, health checks, performance budgets, and release path;
-- test layers and the evidence required for each `REQ-*`.
+1. Update `STATUS.md` with phase, completed requirements, active item, exact blocker, next action, and last verification.
+2. Update `ROADMAP.md` with short ordered items and honest states.
+3. Update `TRACEABILITY.md` from requirement to design, code, and evidence.
+4. Update `ACTIVE-SKILLS.md` with actual loaded/applied routes.
+5. Record only durable decisions in `DECISIONS.md`.
+6. Run the relevant gate checker and leave the repository in a known state.
 
-Choose the stack from constraints and existing repository evidence. Prefer one coherent stack over a fashionable mix. Preserve lockfiles and toolchain contracts. Record material choices in `DECISIONS.md` with the reason, alternatives rejected, and consequence. For web UI, use `$design-everything` before implementation; for native UI, use the platform skill as implementation authority and use `$design-everything` only for compatible visual direction. In every visual project, create `design-references/<slug>/` before UI code and record the brief, accepted/rejected directions, assets, tokens, and viewport or window states that must be verified.
+On a new thread or after compaction, read `AGENTS.md`, `PROJECT.md`, `ARCHITECTURE.md`, `STATUS.md`, `ROADMAP.md`, `GRILL.md`, `ACTIVE-SKILLS.md`, and `GATES.md` before touching code. Chat history is not the source of truth.
 
-## 4. Route the right specialists
+## Direct references
 
-Always start with `ponytail:ponytail`, `$grill-me`, and the project map. Add only the rows that match the detected project:
-
-| Project area | Local route |
-| --- | --- |
-| Web UI / design system | `$design-everything`, `$css-for-perfect-frontend`, `$adapt`, `$ui-component-patterns` |
-| React / Next / Vite | `$vercel-react-best-practices`, `$vercel-composition-patterns`, `$react-doctor`, `$react:components`, `$vite`, `$vite-patterns`, `$typescript-advanced-types` |
-| UI quality / browser | `$audit`, `$harden`, `$polish`, `$web-design-guidelines`, `$agent-browser` or `$playwright`, `$tdd`, `$vitest` |
-| Rust | `$rust-best-practices`, `$rust-async-patterns`, `$rust-compile-optimization`; add `$unsafe-checker` for unsafe/FFI |
-| Rust desktop / cross-platform | `$tauri-v2`, then frontend routes; search for a verified platform skill if Tauri is not the fit |
-| Python service / automation | `$fastapi-python`, `$async-python-patterns`, `$python-type-safety`, `$python-error-handling`, `$python-resource-management`, `$python-code-style`, `$python-performance-optimization` |
-| Go | `$golang-patterns`, `$golang-pro`, `$go-concurrency-patterns`, `$golang-testing` |
-| Cloudflare | `$cloudflare`, `$cloudflare:wrangler`, `$cloudflare:workers-best-practices`, plus Agents SDK/Durable Objects/MCP skills only when used |
-| Supabase / PostgreSQL | `$supabase`, `$supabase:supabase-postgres-best-practices`, `$postgresql-table-design`, `$postgresql-optimization`, `$postgresql-code-review` |
-| SQL generally | `$sql-code-review`, `$sql-optimization`, `$sql-optimization-patterns` |
-| iPhone / iPad / Apple | `$mobile-ios-design`, `$swiftui-expert-skill`, `$swiftui-patterns`, `$swiftui-performance`, `$swiftui-animation`, `$ios-localization`, `$ios-networking`, `$ios-security` |
-| macOS native | `$macos-development` for planning, architecture, SwiftData, AppKit/SwiftUI bridging, capabilities, HIG, and macOS-specific UI; add `$mobile-ios-design`, SwiftUI routes, and `$app-store-review` only when relevant |
-| Android | `$mobile-android-design`, `$android-clean-architecture`; add Expo routes only for Expo/React Native |
-| Windows native WinUI 3 | `$winui-dev-workflow`, `$winui-design`, `$winui-code-review`, `$winui-ui-testing`, `$winui-packaging` |
-| Windows native WPF / WinForms / Win32 / MFC | Choose the implementation toolkit with `$find-skills`; use `$windows-desktop-e2e` for UIA tests. No generic unverified Windows builder is assumed |
-| Qt desktop (Windows / Linux / macOS) | `$qt-cmake-project` for Qt 6/CMake structure and `$qt-ui-design` for Qt/QML layout, input, accessibility, DPI, and design review; add `$windows-desktop-e2e` for native Windows UIA tests |
-| Windows / Linux cross-platform desktop | Prefer `$tauri-v2` for a Rust/web desktop product; add the target platform's E2E and packaging route |
-| Linux native desktop | Use `$qt-cmake-project` and `$qt-ui-design` for a Qt 6 target. No trusted GTK skill was added in the current audit; run `$find-skills` again for a concrete GTK/distribution target |
-| Desktop release / packaging | Use `$winui-packaging` for WinUI/MSIX; use the selected Qt/Tauri/distribution packaging guidance for other targets; do not mark release done until install, launch, signing, update, and rollback evidence exists |
-| Optimization / cleanup | `ponytail:ponytail`, `$optimize`, `$rust-compile-optimization`, `$ponytail:ponytail-audit` for a read-only repo-wide complexity report |
-
-Do not load all rows. Cap the active specialist set to the smallest group that covers the request. Avoid two skills that own the same decision unless one is explicitly a review pass. Resolve conflicts in this order: user contract → existing repository contract → security/correctness/accessibility → mandatory platform/runtime rules → performance → selected design direction → optional style preferences. Ponytail applies throughout by selecting the simplest solution that remains compliant.
-
-## 5. Organize and implement the repository
-
-Before adding code:
-
-1. Reuse existing modules, primitives, dependency versions, scripts, and naming patterns.
-2. Keep source, tests, docs, assets, migrations, generated output, and local research in clear locations. Update `.gitignore` only for known generated/local files.
-3. Build a complete vertical slice in dependency order: domain/data contract, core logic, boundary/API, UI or CLI, persistence/integration, then delivery wiring.
-4. Keep modules small and responsibility-based. Avoid speculative abstractions, compatibility layers, wrappers, plugin systems, and configuration for one value.
-5. Never add a stub, fake provider, placeholder implementation, silent fallback, or half-integrated feature unless the user explicitly asks for one and the limitation is recorded.
-6. Update `TRACEABILITY.md` as each `REQ-*` moves from planned to implemented to verified. Update `ROADMAP.md` and `STATUS.md` after each meaningful slice.
-
-When the user asks for a web visual surface, create `design-references/<slug>/` before UI code and route `$design-everything`. For native visual surfaces, create the same folder but route the native platform skill as implementation authority; use `$design-everything` only for compatible direction. When the user asks for a technical-only change, do not generate decorative design assets; still maintain the project map.
-
-## 6. Build, optimize, and clean safely
-
-- Detect the package manager and use its existing lockfile. Do not upgrade versions “because they are latest” without a requirement, compatibility check, and verification.
-- Detect the toolchain from repository files. Prefer the project’s pinned versions and existing build profiles.
-- Start with the smallest relevant check, then run the full requested gate. Keep a command/result record in `STATUS.md`.
-- For Rust, use `$rust-compile-optimization` before changing profiles, caches, or global Cargo configuration. Use disk-conscious, command-scoped changes and preview cleanup before any removal.
-- For Node/Python/Go, reuse installed tooling and existing task runners before adding a new build layer.
-- For desktop delivery, treat packaging as implementation work, not a final note. Resolve the target's installer/package format, signing identity, update path, install/launch smoke test, and rollback or recovery path. Use a verified specialist or official platform documentation for the exact target. A successful compile is not a shippable desktop release.
-- Remove only clearly generated or dead artifacts after read-only inspection. Never delete databases, user assets, credentials, sessions, research output, ignored runtime state, or unrelated dirty work.
-- Run `ponytail:ponytail-audit` only as a read-only complexity report; apply its findings only when inside scope and after verifying the replacement.
-
-The shortest build is not the least verified build. Keep input validation, error handling, authorization, accessibility, data integrity, and security checks even in Ponytail mode.
-
-## 7. Verify and close every requirement
-
-For each `REQ-*`, verify the actual outcome, not only compilation:
-
-- unit/integration/e2e checks at the relevant risk boundary;
-- typecheck, lint, build, migration/schema checks, and packaging as applicable;
-- real browser/device/platform smoke tests for user-facing work;
-- failure, empty, permission, retry, offline, long-input, localization, and boundary states;
-- performance/resource evidence when optimization is part of the request;
-- clean repository status and expected generated artifacts.
-
-Mark `done` only when implementation, verification, documentation, and traceability are complete. If a real external blocker remains, mark `blocked`, finish all independent work, and write one concrete blocker plus the smallest next action. Do not hide missing work in prose.
-
-## 8. Handoff and compaction survival
-
-End each substantial turn with:
-
-1. `STATUS.md`: current phase, completed items, active item, blocker, next action, last verification.
-2. `ROADMAP.md`: short ordered items, with completed items checked and deferred work explicit.
-3. `TRACEABILITY.md`: updated requirement rows and evidence paths/commands.
-4. `DECISIONS.md`: only decisions that future agents must not re-litigate.
-
-Use simple language and stable names. Include exact paths, commands, versions, branch/commit when known, and dates when state may drift. On a new thread, rebuild context from these files before touching code.
-
-## Reference chapters
-
-- [project-lifecycle.md](references/project-lifecycle.md): grilling, scope, questions, and complete-delivery loop.
-- [architecture-and-repo.md](references/architecture-and-repo.md): persistent project map, repository layout, and traceability schema.
-- [platform-chapters.md](references/platform-chapters.md): platform-specific routes and implementation boundaries.
-- [routing-and-discovery.md](references/routing-and-discovery.md): local skill selection, external verification, and conflict rules.
-- [build-and-quality.md](references/build-and-quality.md): compilation, cleanup, security, tests, and done gates.
-- [language-and-handoff.md](references/language-and-handoff.md): simplified technical language and context-survival rules.
+- [bundled-skill-catalog.md](references/bundled-skill-catalog.md): included routes and activation policy.
+- [project-lifecycle.md](references/project-lifecycle.md): contract and delivery loop.
+- [architecture-and-repo.md](references/architecture-and-repo.md): map and repository rules.
+- [platform-chapters.md](references/platform-chapters.md): platform-specific boundaries.
+- [build-and-quality.md](references/build-and-quality.md): verification and cleanup.
+- [language-and-handoff.md](references/language-and-handoff.md): clear language and context survival.
+- [routing-and-discovery.md](references/routing-and-discovery.md): missing-skill discovery and provenance.

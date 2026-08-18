@@ -1,0 +1,4 @@
+interface:
+  display_name: "User-oriented Frontend and Design"
+  short_description: "Keep frontend copy user-facing, not prompt-facing"
+  default_prompt: "Use $user-oriented-frontend-and-design to make this frontend feel written for real end users, not as a description of the prompt."

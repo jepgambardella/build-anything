@@ -2,6 +2,11 @@
 
 “Production-ready” is a set of evidence, not a tone.
 
+Use the bundled `unlazy` skill for the acceptance ledger. Before coding, put
+one gate in `GATES.md` for every requested outcome. Run the bundled
+`gate-check.mjs` after each meaningful slice and again before the final report.
+Do not report a checked box whose evidence is still `pending`.
+
 ## Build order
 
 1. Parse/configure/typecheck the smallest changed unit.
@@ -10,6 +15,7 @@
 4. Run the full project gate required by the repository.
 5. Run a real smoke path: browser, device, CLI, API, worker, desktop binary, or deployed preview as applicable.
 6. Record commands and results in `docs/project/STATUS.md` and map them to `TRACEABILITY.md`.
+7. Re-run the parent or root gates. A child self-report is not proof.
 
 Use existing package scripts and lockfiles. Do not silently change Node, Rust, Python, Go, Xcode, Android, or provider versions. If a version change is necessary, record the reason, affected contracts, and rollback/recovery path.
 

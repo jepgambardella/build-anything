@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Compile Optimization"
+  short_description: "Keep Rust builds fast and disk usage bounded"
+  default_prompt: "Use $rust-compile-optimization to optimize this Rust build for low disk usage while preserving the required build and test behavior."

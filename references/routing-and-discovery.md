@@ -1,20 +1,25 @@
 # Routing and skill discovery
 
-Build Anything is an orchestrator. It should route, not create contradictory prompt piles.
+Build Anything is an orchestrator. It should route bundled skills, not create
+contradictory prompt piles or assume a user's global installation.
 
-## Local-first routing
+## Bundle-first routing
 
-Prefer the installed local skill that owns the concern:
+Read the bundled copy from `bundled-skills/<name>/SKILL.md` first:
 
-- project definition: `$grill-me`, then this skill;
-- web UI: `$design-everything`; native UI: the selected platform skill owns implementation and `$design-everything` is optional visual direction;
-- minimal code and dependency choices: `$ponytail:ponytail`;
+- project definition: `grill-me`, then this skill;
+- completion discipline: `unlazy` before implementation;
+- minimal code and dependency choices: `ponytail` at full intensity;
+- web UI: `design-everything`; native UI: the selected bundled platform skill owns implementation and `design-everything` supplies compatible direction;
 - project map: this skill and `init_project_map.py`;
 - language/platform/backend/database chapters: see [platform-chapters.md](platform-chapters.md);
-- missing capability: `$find-skills`;
-- new or updated skill: `$skill-creator`.
+- missing capability: bundled `find-skills`;
+- new or updated skill: bundled `skill-creator`.
 
-Do not invoke two equivalent skills as simultaneous authorities. Use one implementation guide and one review guide when necessary. Keep the active set small enough to remember the decisions.
+Read every mandatory entrypoint before use and record it in
+`docs/project/ACTIVE-SKILLS.md`. Do not invoke two equivalent skills as
+simultaneous authorities. Use one implementation guide and one review guide
+when necessary. Keep the active set small enough to remember the decisions.
 
 ## Find-skills procedure
 
@@ -25,7 +30,7 @@ When local coverage is missing:
 3. Prefer official or established sources and meaningful install counts.
 4. Inspect the source repository, actual `SKILL.md`, scope, last activity, license, and security warnings. Read the installed file and any directly required references before routing it.
 5. Reject a result that is too narrow, stale, duplicated locally, low-trust, or under-specified.
-6. Present the candidate, evidence, install command, and trade-off. Install only after explicit user approval. When approval exists, use `$skill-installer`, check that the destination is not already present, install the exact path, validate it, and update this routing record.
+6. Present the candidate, evidence, install command, and trade-off. Baseline routes must be bundled. For a missing optional route, install only after explicit user approval; use the bundled `skill-installer`, check that the destination is not already present, install the exact path, validate it, and update this routing record.
 7. Record reproducibility data for every installed external skill: source repository, exact path, ref/tag, commit SHA, installation date, local destination, validator result, and any local metadata-only normalization. Counts and stars must include their check date and source; they are not a substitute for a pinned ref.
 
 ## Candidates verified during creation

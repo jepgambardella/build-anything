@@ -1,6 +1,9 @@
 # Platform chapters
 
-Select one primary chapter and add only cross-cutting skills that the project actually uses.
+Select one primary chapter and add only cross-cutting skills that the project
+actually uses. Read the matching bundled `SKILL.md` files first and record
+their application in `docs/project/ACTIVE-SKILLS.md`; do not assume a global
+installation.
 
 ## Web application
 

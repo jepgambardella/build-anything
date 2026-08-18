@@ -4,7 +4,11 @@ Use this chapter for every new build or major change. Keep the loop short for a 
 
 ## Grill protocol
 
-Start with the explicit `$grill-me` skill and `/grilling` session. The goal is not to produce a long specification. The goal is to remove ambiguity that would change the architecture, cost, safety, user outcome, or delivery order.
+Read `bundled-skills/grill-me/SKILL.md`, invoke the bundled `grill-me` skill,
+and start a real `/grilling` session. The goal is not to produce a long
+specification. The goal is to remove ambiguity that would change the
+architecture, cost, safety, user outcome, or delivery order. Record the
+session in `docs/project/GRILL.md`; a name in chat is not activation evidence.
 
 Use a first round of no more than seven grouped questions. Ask follow-ups only when an unanswered point changes scope, architecture, safety, cost, or acceptance. Ask about:
 
@@ -17,6 +21,11 @@ Use a first round of no more than seven grouped questions. Ask follow-ups only w
 7. Acceptance evidence and what “done” means.
 
 Use the repository to answer questions before asking the user. Ask for a choice only when different answers create materially different work. Offer a recommended option with a short reason. Stop grilling when the project contract is testable.
+
+Before implementation, read the bundled `unlazy` and `ponytail` entrypoints,
+create `GATES.md`, and record all three baseline routes in
+`docs/project/ACTIVE-SKILLS.md`. If `/grilling` is unavailable, record the
+exact `GRILL-FALLBACK` reason before using the embedded question set.
 
 ## Contract format
 
