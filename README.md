@@ -80,3 +80,17 @@ The skill starts with `$grill-me`, creates the project map before code, routes `
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Acknowledgements
+
+Build Anything is an orchestration layer. It does not claim authorship of the specialist guidance bundled in this repository. We are grateful to the original authors and maintainers whose work makes this package useful:
+
+- [AllThingsSmitty/css-protips](https://github.com/AllThingsSmitty/css-protips) for practical CSS techniques and responsive details.
+- [Leonxlnx/unlazy](https://github.com/Leonxlnx/unlazy) for gate-first execution, evidence discipline, Depth Tree planning, and adversarial completion checks.
+- [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) for strong React and Next.js engineering guidance.
+- [The Qt Company R&D agent skills](https://github.com/TheQtCompanyRnD/agent-skills) for Qt and cross-platform desktop development guidance.
+- [Microsoft WinUI agent skills](https://github.com/microsoft/win-dev-skills) for Windows app development, UI testing, and packaging guidance.
+- [Apple platform skills](https://github.com/rshankras/claude-code-apple-skills) for macOS and Apple-platform development guidance.
+- Every local skill author and maintainer whose design, frontend, platform, testing, quality, and workflow work is included in the bundle.
+
+The complete provenance record is available in [references/source-notes.md](references/source-notes.md). Please follow each original project's license and attribution requirements when reusing its material.
